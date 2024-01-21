@@ -13,7 +13,7 @@ resource "yandex_compute_instance" "build" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet-1.id
+    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
     nat       = true
   }
 
@@ -37,7 +37,7 @@ resource "yandex_compute_instance" "prod" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet-1.id
+    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
     nat       = true
   }
 
