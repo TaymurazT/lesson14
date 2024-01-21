@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: allon
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDrMDos/j7ekCUk7XxFSM200ifeRK/CLTvvQuP7Kt59QuoWNAEn4E4SQfFtmm8BqhuJ4p8jWqQ7IhHwEE44hKOGz2pFh3iW4hAhsIwASj706YBfTHoFzGB0nC37JJygLXJB6LBOhYesZIcqbeXAJpgchXE6Kl9W32zkDBdleyjF7fxdPKf4zRMUhsSRmfan/tWhhp5G/d1ynhmBFdT48gntRN8lU7/wpGIe7Bg60M5CYu0hVL3bKqTB7FXvk0aYG44J/2i2H/KqAg/S2eJXLP8sEA/uz3G3UQ3/gPpa9nnBlboftAGDw/OZGvcaJbsah3iPY9j1neOuT7tOQwtKND2NI9g5lot7TSgbDv/ELiDBUqh/OQMSh+hz+4zv6Yih3sNCfbfXQAKwvUqHgrpFyO/22GVoP4e0ellf3jv7ZE5o96kpmXBIPoXA6CrDxkSjD1InNH/oHuhZwovwbX0NFX9nyj/zNozy/xOyopn6+BozfJ4BSkArf5H4/EzszD7jWLk= allon@terraform
