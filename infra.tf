@@ -1,5 +1,5 @@
 resource "yandex_compute_instance" "vm-1" {
-  name = "terraform1"
+  name = "build"
 
   resources {
     cores  = 2
@@ -13,7 +13,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
+    subnet_id = yandex_vpc_subnet.terra_sub.id
     nat       = true
   }
 
@@ -23,7 +23,7 @@ resource "yandex_compute_instance" "vm-1" {
 }
 
 resource "yandex_compute_instance" "vm-2" {
-  name = "terraform2"
+  name = "prod"
 
   resources {
     cores  = 4
@@ -37,7 +37,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
+    subnet_id = yandex_vpc_subnet.terra_sub.id
     nat       = true
   }
 
@@ -46,14 +46,14 @@ resource "yandex_compute_instance" "vm-2" {
   }
 }
 
-resource "yandex_vpc_network" "default" {
-  name = "default"
+resource "yandex_vpc_network" "terra" {
+  name = "terra"
 }
 
-resource "yandex_vpc_subnet" "default-ru-central1-b" {
-  name           = "default-ru-central1-b"
+resource "yandex_vpc_subnet" "terra_sub" {
+  name           = "terra_sub"
   zone           = "ru-central1-b"
-  network_id     = yandex_vpc_network.default.id
+  network_id     = yandex_vpc_network.terra.id
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
 
