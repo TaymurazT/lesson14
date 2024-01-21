@@ -15,3 +15,7 @@ provider "yandex" {
     folder_id  = "b1gaqd9fid4ptghu9b80"
     zone = "ru-central1-b"
 }
+
+resource "yandex_compute_instance" "vm-1" {
+  name = "terraform1"
+}
