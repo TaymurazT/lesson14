@@ -54,7 +54,7 @@ resource "yandex_vpc_subnet" "terra_sub" {
   name           = "terra_sub"
   zone           = "ru-central1-b"
   network_id     = yandex_vpc_network.terra.id
-  v4_cidr_blocks = ["192.168.10.0/24"]
+  v4_cidr_blocks = ["10.129.0.0/24"]
 }
 
 output "internal_ip_address_vm_1" {
