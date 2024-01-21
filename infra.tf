@@ -13,7 +13,7 @@ resource "yandex_compute_instance" "build" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
+    subnet_id = yandex_vpc_subnet.default.id
     nat       = true
   }
 
@@ -37,7 +37,7 @@ resource "yandex_compute_instance" "prod" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.default-ru-central1-b.id
+    subnet_id = yandex_vpc_subnet.default.id
     nat       = true
   }
 
@@ -46,14 +46,14 @@ resource "yandex_compute_instance" "prod" {
   }
 }
 
-resource "yandex_vpc_network" "network-1" {
-  name = "network1"
+resource "yandex_vpc_network" "default" {
+  name = "default"
 }
 
 resource "yandex_vpc_subnet" "subnet-1" {
   name           = "subnet1"
   zone           = "ru-central1-b"
-  network_id     = yandex_vpc_network.network-1.id
+  network_id     = yandex_vpc_network.default.id
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
 
