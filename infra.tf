@@ -26,7 +26,7 @@ resource "yandex_compute_instance" "vm-1" {
     inline = [
        "sudo apt-get update",
        "sudo apt-get install -y maven",
-       "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git 
+       "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git" 
     ]     
   
 }
