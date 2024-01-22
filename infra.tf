@@ -28,7 +28,7 @@ resource "yandex_compute_instance" "vm-1" {
        "sudo apt-get install -y maven",
        "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git 
     ]     
-  }
+  
 }
 
 resource "yandex_compute_instance" "vm-2" {
