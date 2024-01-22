@@ -22,15 +22,18 @@ resource "yandex_compute_instance" "vm-1" {
  #   ssh-keys = "ubuntu:${file("/home/allon/.ssh/id_rsa.pub")}"
   }
 
-  provisioner "build" {
-    inline = [
-       "sudo apt-get update",
-       "sudo apt-get install -y maven",
-       "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git" 
-    ]     
-  
-}
+  build {
+    sources = ["source.yandex.yc-toolbox"]
 
+    provisioner "build" {
+      inline = [
+         "sudo apt-get update",
+         "sudo apt-get install -y maven",
+         "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git" 
+      ]     
+  
+     }
+  }
 }
 
 resource "yandex_compute_instance" "vm-2" {
