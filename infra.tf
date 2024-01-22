@@ -22,8 +22,8 @@ resource "yandex_compute_instance" "vm-1" {
  #   ssh-keys = "ubuntu:${file("/home/allon/.ssh/id_rsa.pub")}"
   }
 
-  build {
-    sources = ["source.yandex.yc-toolbox"]
+ # build {
+  #  sources = ["source.yandex.yc-toolbox"]
 
     provisioner "build" {
       inline = [
@@ -33,7 +33,7 @@ resource "yandex_compute_instance" "vm-1" {
       ]     
   
      }
-  }
+ # }
 }
 
 resource "yandex_compute_instance" "vm-2" {
