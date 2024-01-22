@@ -13,7 +13,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.terra_sub.id
+    subnet_id = yandex_vpc_subnet.terra1_sub.id
     nat       = true
   }
 
@@ -38,7 +38,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.terra_sub.id
+    subnet_id = yandex_vpc_subnet.terra1_sub.id
     nat       = true
   }
 
@@ -48,14 +48,14 @@ resource "yandex_compute_instance" "vm-2" {
   }
 }
 
-resource "yandex_vpc_network" "terra" {
-  name = "terra"
+resource "yandex_vpc_network" "terra1" {
+  name = "terra1"
 }
 
-resource "yandex_vpc_subnet" "terra_sub" {
-  name           = "terra_sub"
+resource "yandex_vpc_subnet" "terra1_sub" {
+  name           = "terra1_sub"
   zone           = "ru-central1-b"
-  network_id     = yandex_vpc_network.terra.id
+  network_id     = yandex_vpc_network.terra1.id
   v4_cidr_blocks = ["10.129.0.0/24"]
 }
 
