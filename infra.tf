@@ -21,8 +21,8 @@ resource "yandex_compute_instance" "vm-1" {
      user-data = "${file("/home/allon/lesson14/lesson14/meta.txt")}"
  #   ssh-keys = "ubuntu:${file("/home/allon/.ssh/id_rsa.pub")}"
   }
-  provisioner "build" {
-     inline: [
+  provisioner "build" = {
+     inline = [
        "sudo apt-get update",
        "sudo apt-get install -y maven",
        "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git 
