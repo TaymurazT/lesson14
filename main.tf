@@ -1,12 +1,26 @@
-terraform {
+#terraform {
 #  required_version = "1.1.7"
 
+#  required_providers {
+#    yandex = {
+#      source = "yandex-cloud/yandex"
+#      version = "0.105.0"
+#    }
+#  }
+#}
+
+
+terraform {
   required_providers {
     yandex = {
       source = "yandex-cloud/yandex"
-      version = "0.105.0"
     }
   }
+  required_version = ">= 0.13"
+}
+
+provider "yandex" {
+  zone = "ru-central1-b" # Зона доступности по умолчанию
 }
 
 provider "yandex" {
