@@ -8,10 +8,6 @@ terraform {
 }
 
 provider "yandex" {
-  zone = "ru-central1-b" # Зона доступности по умолчанию
-}
-
-provider "yandex" {
     token  = "y0_AgAAAAANhruJAATuwQAAAAD4r9GtCfNVfAtkQLyDf-36uo9fEWuYSnY"
     cloud_id  = "b1g3kq4jkid5coa26uk9"
     folder_id  = "b1gaqd9fid4ptghu9b80"
