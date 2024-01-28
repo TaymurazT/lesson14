@@ -25,23 +25,23 @@ resource "yandex_compute_instance" "vm-1" {
  # build {
   #  sources = ["source.yandex.yc-toolbox"]
 
-    provisioner "build" {
-      inline = [
-         "sudo apt-get update",
-         "sudo apt-get install -y maven",
-         "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git" 
-      ]     
+   # provisioner "build" {
+   #   inline = [
+   #      "sudo apt-get update",
+   #      "sudo apt-get install -y maven",
+   #      "sudo git clone git clone https://github.com/TaymurazT/Java-Mysql-Simple-Login-Web-application.git" 
+   #   ]     
   
-     }
+#     }
  # }
-}
+#}
 
 resource "yandex_compute_instance" "vm-2" {
   name = "prod"
 
   resources {
-    cores  = 4
-    memory = 4
+    cores  = 2
+    memory = 2
   }
 
   boot_disk {
