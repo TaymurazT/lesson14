@@ -34,7 +34,7 @@ resource "yandex_compute_instance" "vm-1" {
   
 #     }
  # }
-#}
+}
 
 resource "yandex_compute_instance" "vm-2" {
   name = "prod"
