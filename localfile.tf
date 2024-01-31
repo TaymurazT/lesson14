@@ -11,4 +11,3 @@ resource "local_file" "inventory" {
   #  command = "ANSIBLE_CONFIG=${path.module}/../ansible/ansible.cfg ansible-playbook ${path.module}/../ansible/site.yml"
   #}
 }
-
