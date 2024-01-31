@@ -10,4 +10,4 @@ resource "local_file" "inventory" {
  # provisioner "local-exec" {
   #  command = "ANSIBLE_CONFIG=${path.module}/../ansible/ansible.cfg ansible-playbook ${path.module}/../ansible/site.yml"
   #}
-}
+  }
