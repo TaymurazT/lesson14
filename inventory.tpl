@@ -1,4 +1,3 @@
 [webservers]
-%{ for addr in ip_addrs ~}
-${addr}
-%{ endfor ~}
+%{ip_addrs ~}
+
