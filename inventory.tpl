@@ -1,3 +1,7 @@
-[webservers]
-%{ip_addrs ~}
+[builder]
+${addr1}
+
+
+[prod]
+${addr2}
 
