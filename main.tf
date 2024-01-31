@@ -3,6 +3,10 @@ terraform {
     yandex = {
       source = "yandex-cloud/yandex"
     }
+    local = {
+      source = "yandex-cloud/local"
+     # version = "2.0.0"
+    }
   }
   required_version = ">= 0.15"
 }
