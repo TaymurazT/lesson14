@@ -4,7 +4,8 @@ resource "local_file" "inventory" {
 
   content = templatefile("${path.module}/inventory.tpl", {
     #ip_addrs = google_compute_instance.andrdi-gcp-server[*].network_interface[0].access_config[0].nat_ip
-    ip_addrs = yandex_compute_instance.vm-[*].network_interface.0.ip_address
+    ip_addrs = yandex_compute_instance.vm-1.network_interface.0.ip_address
+    ip_addrs = yandex_compute_instance.vm-2.network_interface.0.ip_address
   })
 
  # provisioner "local-exec" {
