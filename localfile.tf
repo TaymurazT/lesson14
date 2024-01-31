@@ -1,5 +1,5 @@
 resource "local_file" "inventory" {
-  filename = "/etc/ansible/hosts"
+  filename = "/home/allon/lesson14/ansible_pr/hosts"
   file_permission  = "0644"
 
   content = templatefile("/home/allon/lesson14/lesson14/inventory.tpl", {
