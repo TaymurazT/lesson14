@@ -7,7 +7,7 @@ resource "local_file" "inventory" {
     addr2 = yandex_compute_instance.vm-2.network_interface.0.nat_ip_address
   })
 
- # provisioner "local-exec" {
-  #  command = "ANSIBLE_CONFIG=${path.module}/../ansible/ansible.cfg ansible-playbook ${path.module}/../ansible/site.yml"
-  #}
+  provisioner "local-exec" {
+    command = "ANSIBLE_CONFIG=/etc/ansible/ansible.cfg ansible-playbook /home/allon/lesson14/ansible_pr/hometask8.yaml"
   }
+ }
